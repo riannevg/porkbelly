@@ -116,8 +116,12 @@ i.fab{
     padding:0%;
 }
 
-nav a, a:hover{
+nav a:hover{
     text-decoration:underline;
+}
+
+a:hover{
+  text-decoration:underline;
 }
 
 .footer-social{
