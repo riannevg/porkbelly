@@ -1,5 +1,211 @@
+:root{
+    --dark:#3e331f;
+    --medium:#866D40;
+    --light:#D2AB66;
+    --text-color:#D2AB66;
+    --serif: 'Courier Prime', serif;
+    --heading: 'Courier Prime', sans-serif;
+  }
+  
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+
+[class*="col-"], [class*="col_"], [class~="col"]{
+    padding:0;
+    margin:0;
+}
+
+
+[class*='grid']{
+    padding:0;
+    margin:0;
+}
+
+img{max-width:100%;}
+
+  
+  
+  /* REUSABLE UTILITY CLASSES */
+  
+  .tall-30  {min-height:30vh;}
+  .tall-40  {min-height:40vh;}
+  .tall-50  {min-height:50vh;}
+  .tall-60  {min-height:60vh;}
+  .tall-70  {min-height:70vh;}
+  .tall-80  {min-height:80vh;}
+  .tall-90  {min-height:90vh;}
+  .tall-100 {min-height:100vh;}
+  
+  .padded   {padding:5%;}
+  .padded-1 {padding:1rem;}
+  .padded-2 {padding:2rem;}
+  .padded-0 {padding:0;}
+  .padded-t-0{padding-top:0;}
+  .padded-b-0{padding-bottom:0;}
+  .padded-l-2{padding-left:2rem;}
+  .padded-r-2{padding-right:2rem;}
+  .padded-b{padding-bottom:5%;}
+  
+  .margin   {margin:5%;}
+  .margin-t-0{margin-top:0;}
+  .margin-b-0{margin-bottom:0;}
+  
+  .bg-light   {background-color: var(--light);}
+  .bg-medium  {background-color: var(--medium)}
+  .bg-dark    {background-color: var(--dark);}
+  .bg-black    {background-color:black;}
+  
+  .left   {text-align:left;}
+  .center {text-align:center;}
+  .right  {text-align:right;}
+  
+
+.portrait {padding-bottom:125%;}
+.square {padding-bottom:85%;}
+.landscape{padding-bottom:66%;}
+
+  /* Typography styles */
+  
+  body{
+   color: var(--text-color);
+   font-family: var(--serif);
+    font-weight:200;
+   }
+  
+  h1, h2, h3, h4, h5, h6{
+    font-family:var(--heading);
+  }
+
+
+h2{font-size:2rem;}
+
+  /* Link Styles */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+}
+
+
+nav{
+    margin-top:2rem;
+}
+
+nav a{
+    color: var(--text-color);
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:1.2rem;
+      
+}
+
+i.fab{
+    padding:0%;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+  /* OVERLAY HEADER */
+
+
+.banner{
+    background-image:url('/images/porkbelly-restaurant-sma-34.jpg');
+    background-size:cover;
+    background-position:center;
+    min-height:85vh;
+    padding:1%;
+    margin-top:3.5rem;
+  }
+  
+
+  
+  .bg-overlay{
+    position:relative;
+  }
+  
+  .bg-overlay:before{
+    content:"";
+    position:absolute;
+    top:0rem;
+    bottom:0rem;;
+    left:0rem;
+    right:0rem;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  
+  /* This is to select everything wht is a direct child of the parent with the > * This is needed since the container needs to be relative to be brought to the front. */
+  .bg-overlay > * {
+    position:relative;
+  }
+  
+  /* IMAGE STYLES */
+
+  .pb-logo{
+    background-image:url('/images/porkbelly-logo-transparent-white.png');
+    background-size:cover;
+    background-position:center;
+    min-width:10vh;
+    z-index:3;
+  }
+
+  .bg-restaurante{
+      background-image:url('/images/porkbelly-restaurant-sma-10.jpg');
+      background-size: cover;
+      background-position:center;
+  }
+
+  .bg-image{
+    background-image: url(/images/porkbelly-restaurant-sma-34.jpg);
+    background-color: var(--dark);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+/* slider styles */
+
+.slider-item{
+    padding:3rem;
+   }
+  
+  .slider-container{
+    padding:2rem;
+   
+  }
+  
+  .slick-next::before, .slick-prev::before {
+      font-family: slick;
+      font-size: 30px;
+      line-height: 1;
+      opacity: .75;
+      color: black;
+  }
+  
+  .slick-next {
+      right: 30px;
+  }
+  
+  .slick-prev {
+      left: 30px;
+  }
+  
+  
+  .slick-dots li button::before {
+     font-size: 10px;
+      opacity: 1;
+      color: orange;
+  }
+  
+  .slick-dots {
+      bottom: -2px;
+      }
